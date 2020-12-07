@@ -1,6 +1,8 @@
+// import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        String op = "";
+        // String op = "";
 
         Produto p = new Produto(1, "alguma", 1.1, 1.1, 1.1, 2);
         System.out.println(p.getCusto());
@@ -18,7 +20,7 @@ public class App {
         r.listarPrecos();
         System.out.println(p.getQtd_estoque());
 
-        while(op != "e"){
+        /* while(op != "e"){
             System.out.println(
                 "Criar Produto - NP" + "\n" +
                 "Comprar - C" + "\n" +
@@ -32,7 +34,23 @@ public class App {
                 "Alterar Custo - AC" + "\n" +
                 "Alterar Margem de Lucro - AML" + "\n"
             );
-        }
-    }
+            Scanner sc = new Scanner(System.in);
+            op = sc.next();
+            System.out.println(op);
+        
+            if(op == "NP"){
+                int codigo = Integer.parseInt(sc.next());
+                String descricao = sc.next();
+                double vl_compra = Double.parseDouble(sc.next());
+                double custo = Double.parseDouble(sc.next());
+                double margem_lucro = Double.parseDouble(sc.next());
+                int qtd_estoque = Integer.parseInt(sc.next());
 
+                Produto novo = new Produto(codigo, descricao, vl_compra, custo, margem_lucro, qtd_estoque);
+                r.inserirProduto(novo);
+            }
+
+            sc.close();
+        } */
+    }
 }
