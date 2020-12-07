@@ -9,7 +9,10 @@ public class App {
         System.out.println(r);
 
         r.inserirProduto(p);
+        r.comprar(1, 10);
         r.comprar(2, 10);
+        r.vender(1, 5);
+        r.vender(2, 5);
         r.listarPrecos();
         System.out.println(p.getQtd_estoque());
     }

@@ -43,6 +43,22 @@ public class RevendaComArray {
             System.out.println(e);
         }
     }
+
+    public void vender(int cod, int qtd){
+        try{
+            for(Produto p : this.produtos){
+                if(p != null){
+                    if(p.getCodigo() == cod){
+                        p.venda(qtd);
+                        return;
+                    }
+                }
+            }
+            throw new Exception("Produto não cadastrado");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 }
 
 /* 
