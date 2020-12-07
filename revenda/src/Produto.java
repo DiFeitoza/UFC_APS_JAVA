@@ -28,6 +28,19 @@ public class Produto {
         this.qtd_estoque = qtd_estoque;
     }
 
+    @Override
+    public String toString(){
+        return "código: " + this.codigo + " descrição: " + this.descricao + " valor: " + this.vl_compra;
+    }
+
+    public int getCodigo(){
+        return this.codigo;
+    }
+
+    public String getDescricao(){
+        return this.descricao;
+    }
+
     public double getVl_compra(){
         return this.vl_compra;
     }
@@ -40,6 +53,11 @@ public class Produto {
         return this.margem_lucro;
     }
 
+    public int getQtd_estoque(){
+        return this.qtd_estoque;
+    }
+
+    // Setters
     public void setVl_compra(double value){
         this.vl_compra = value;
     }
@@ -53,23 +71,14 @@ public class Produto {
     }
 
     void compra(int qtd){
-        qtd_estoque = qtd_estoque + qtd;
+        this.qtd_estoque = qtd_estoque + qtd;
     }
     
     void venda(int qtd){
-        qtd_estoque = qtd_estoque - qtd;
+        this.qtd_estoque = qtd_estoque - qtd;
     }
 
     double calculaPrecoVenda( ){
         return vl_compra + custo + margem_lucro * (vl_compra + custo);
     }
-
-/*  
-    crie um construtor para inicializar o valor dos atributos: código e descrição
-
-    crie um construtor para inicializar o valor dos atributos: código, descrição, valor de compra, custo e
-    margem de lucro
-
-    crie um construtor para inicializar o valor dos atributos: código, descrição, valor de compra, custo,
-    margem de lucro e quantidade em estoque */
 }
