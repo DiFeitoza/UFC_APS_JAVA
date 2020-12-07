@@ -70,15 +70,15 @@ public class Produto {
         this.margem_lucro = value;
     }
 
-    void compra(int qtd){
+    public void compra(int qtd){
         this.qtd_estoque = qtd_estoque + qtd;
     }
     
-    void venda(int qtd){
+    public void venda(int qtd){
         this.qtd_estoque = qtd_estoque - qtd;
     }
 
-    double calculaPrecoVenda( ){
+    public double calculaPrecoVenda(){
         return vl_compra + custo + margem_lucro * (vl_compra + custo);
     }
 }
