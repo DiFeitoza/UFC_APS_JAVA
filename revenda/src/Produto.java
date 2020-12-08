@@ -30,7 +30,7 @@ public class Produto {
 
     @Override
     public String toString(){
-        return "código: " + this.codigo + " descrição: " + this.descricao + " valor: " + this.vl_compra;
+        return "Código: " + this.codigo + "\nDescrição: " + this.descricao + "\nValor: " + this.vl_compra + "\n";
     }
 
     public int getCodigo(){
