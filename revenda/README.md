@@ -1,8 +1,7 @@
 ### Projeto de Revenda de Produtos desenvolvido como 1ª Atividade para a Disciplina de APS 2020.2 do curso de Engenharia de Software da UFC Campus Quixadá.
-Disciplina ministrada pelo professor Jefferson de Carvalho.
+Disciplina ministrada pelo professor **[Jefferson de Carvalho](https://github.com/jeffersoncarvalho)**.
 
-**Atividade APS – 2020.2
-Professor Jefferson de Carvalho**
+**Atividade APS – 2020.2**
 
 Fazendo uso da linguagem JAVA, implemente os seguintes exercícios:
 
