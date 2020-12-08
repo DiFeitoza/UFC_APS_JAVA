@@ -1,0 +1,64 @@
+//  com o programa em execucao, copie e cole este arquivo no terminal
+//  em seguida verifique as acoes realizadas
+//  todos os casos de excecao e menus implementados estao abaixo
+//inserir (fusca)
+01
+01
+Fusca Zero
+10000
+1000
+0.1
+10
+//comprar (fusca)
+02
+01
+10
+//vender (fusca)
+03
+01
+5
+//valor de venda (fusca)
+04
+01
+//inserir (pampa)
+01
+02
+Pampa Vermelha
+20000
+1500
+0.1
+10
+//listar precos (todos)
+05
+//consultar valor de compra (fusca)
+06
+01
+//consultar valor de custo (fusca)
+07
+01
+//consultar margem de lucro (fusca)
+08
+01
+//consultar valor de compra (pampa)
+09
+02
+25000
+//consultar valor de custo (pampa)
+10
+02
+1800
+//consultar margem de lucro (pampa)
+11
+02
+0.15
+//teste de excecao (comprar)
+02
+99
+10
+//teste de excecao (vender)
+03
+99
+10
+//teste de excecao (consulta preco venda)
+04
+99
