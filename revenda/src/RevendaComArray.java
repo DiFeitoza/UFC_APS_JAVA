@@ -23,7 +23,7 @@ public class RevendaComArray {
     public void listarPrecos() {
         for(Produto p : this.produtos) {
             if(p != null){
-                System.out.println(p);
+                System.out.println(p + "\nValor de venda: " + p.calculaPrecoVenda() + "\n");
             }
         }
     }
