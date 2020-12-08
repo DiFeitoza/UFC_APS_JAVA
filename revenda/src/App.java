@@ -2,17 +2,16 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Leitor scan = new Leitor();
         Scanner sc = new Scanner(System.in);
         String op = "";
 
-        Produto p = new Produto(1, "alguma", 1.1, 1.1, 1.1, 2);
-        System.out.println(p.getCusto());
-        
-        RevendaComArray r = new RevendaComArray(5);
-        System.out.println(r);
+        RevendaComArray r = new RevendaComArray(100);
 
-        r.inserirProduto(p);
+        /* Produto p = new Produto(1, "alguma", 1.1, 1.1, 1.1, 2);
+        System.out.println(p.getCusto());        
+        RevendaComArray r = new RevendaComArray(5);
+        //System.out.println(r);
+        /* r.inserirProduto(p);
         r.comprar(1, 10);
         r.comprar(2, 10);
         r.vender(1, 5);
@@ -20,7 +19,7 @@ public class App {
         r.consultaPrecoVenda(1);
         r.consultaPrecoVenda(2);
         r.listarPrecos();
-        System.out.println(p.getQtd_estoque());
+        System.out.println(p.getQtd_estoque()); */
 
         while(op != "e"){
             System.out.println(
@@ -57,7 +56,7 @@ public class App {
 
                 Produto novo = new Produto(codigo, descricao, vl_compra, custo, margem_lucro, qtd_estoque);
                 r.inserirProduto(novo);
-                System.out.println("\nNovo produto criado!\n" + novo.toString());
+                System.out.println("\n#Novo produto criado!\n" + novo.toString());
                 // #melhoria - inserir um sys.pause aqui!
             } else if (op.contentEquals("02")){
                 System.out.println("Digite o código do produto:");
@@ -67,7 +66,7 @@ public class App {
 
                 r.comprar(cod, qtd);
                 Produto prod = r.GetProductByCode(cod);
-                System.out.println("\nCompra efetuada!\n" + prod.toString() + "Estoque: " + prod.getQtd_estoque());
+                System.out.println("\n#Compra efetuada!\n" + prod.toString() + "Estoque: " + prod.getQtd_estoque());
             } else if (op.contentEquals("03")){
                 System.out.println("Digite o código do produto:");
                 int cod = Integer.parseInt(sc.nextLine());
@@ -76,9 +75,38 @@ public class App {
 
                 r.vender(cod, qtd);
                 Produto prod = r.GetProductByCode(cod);
-                System.out.println("\nVenda efetuada!\n" + prod.toString() + "Estoque: " + prod.getQtd_estoque());
+                System.out.println("\n#Venda efetuada!\n" + prod.toString() + "Estoque: " + prod.getQtd_estoque());
+            } else if (op.contentEquals("04")){
+                System.out.println("Digite o código do produto:");
+                int cod = Integer.parseInt(sc.nextLine());
+                Produto prod = r.GetProductByCode(cod);
+                System.out.println("\n#Valor de venda\n" + prod.toString() + "Valor de venda: " + prod.calculaPrecoVenda());
             } else  System.out.println("???");
         }
         sc.close();
     }
 }
+
+
+/* Casos de teste
+//inserir
+01
+01
+Fusca Zero
+10000
+1000
+0.1
+10
+//comprar
+02
+01
+10
+//vender
+03
+01
+5
+//valor de venda
+04
+01
+//
+*/
